@@ -6,3 +6,17 @@ The Card component accepts 2 props: title and content.
     These props will be passed in for each Card from the List component.
 
 */
+
+import React from 'react';
+
+function Card(props) {
+  return (
+    <div class="Card">
+        <button type="button">delete</button>
+        <h3>{title}</h3>
+        <p>{content}</p>
+    </div>
+  );
+}
+
+export default Card;
