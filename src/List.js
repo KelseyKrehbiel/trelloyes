@@ -17,9 +17,9 @@ import React from 'react';
 import Card from "./Card";
 
 function List(props) {
-    cardArray = props.cards;
+    let cardArray = props.cards;
 
-    cardList = ""
+    let cardList = ""
 
     for(let c=0; c<cardArray.size;c++){
         cardList += (
@@ -35,5 +35,7 @@ function List(props) {
     }
   return (cardList);
 }
+
+List(Card);
 
 export default List;

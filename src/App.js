@@ -21,7 +21,10 @@ import List from './List';
 import Store from './Store';
 
 function App(props) {
-  
+  let lists = props.lists;
+  console.log(`list: ${lists}`)
+  let allCards = props.allCards;
+  console.log(`cards: ${allCards}`)
 
   return (
   <main class="App">
@@ -34,5 +37,7 @@ function App(props) {
   </main>
   );
 }
+
+App(Store);
 
 export default App;
