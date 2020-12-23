@@ -10,18 +10,16 @@ The Card component accepts 2 props: title and content.
 */
 
 import React from 'react';
-import List from './List';
+import './Card.css'
 
-function Card(props) {
+console.log("in Card");
+export default function Card(props) {
+  console.log("Card function");
   return (
-    <div class="Card">
-        <button type="button">delete</button>
-        <h3>{props.title}</h3>
-        <p>{props.content}</p>
+    <div className="Card">
+      <button type="button">delete</button>
+      <h3>{props.title}</h3>
+      <p>{props.content}</p>
     </div>
   );
 }
-
-Card(List);
-
-export default Card;
