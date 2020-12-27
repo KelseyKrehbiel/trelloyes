@@ -15,6 +15,8 @@ The 2 props are title and content.
 */
 import React from 'react';
 import Card from "./Card";
+import './List.css';
+
 console.log("in List");
 export default function List(props) {
     console.log("List function");
