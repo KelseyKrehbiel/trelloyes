@@ -14,7 +14,7 @@ it('renders without crashing', () => {
     const div = document.createElement('div');
   
     // render the component, this is the actual test, if something is wrong it will fail here
-    ReactDOM.render(<List header="Test Header" cards="1" />, div);
+    ReactDOM.render(<List header="Test Header" cards = {[]} />, div);
   
     // clean up code
     ReactDOM.unmountComponentAtNode(div);
