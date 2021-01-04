@@ -31,6 +31,7 @@ export default function List(props) {
             key={card.id}
             title={card.title}
             content={card.content}
+            onDeleteCard = {props.onDeleteCard}
         />
         )}
         <button

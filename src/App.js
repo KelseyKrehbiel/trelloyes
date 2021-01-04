@@ -28,21 +28,32 @@ class App extends Component {
       allCards: {},
     }
   };
+  state = this.props.store;
+
+  handleDeleteCard = (card) =>{
+    console.log("deleting ",{card})
+  }
+
+  handleRandomCard = (card) =>{
+    console.log("adding random card")
+  }
 
   render() {
 
-    const { store } = this.props
+    //const { store } = this.props
     return (
       <main className="App">
           <header className="App-header">
             <h1>Trelloyes!</h1>
           </header>
           <div className='App-list'>
-            {store.lists.map(list => (
+            {this.state.lists.map(list => (
               <List
                 key={list.id}
                 header={list.header}
-                cards={list.cardIds.map(id => store.allCards[id])}
+                cards={list.cardIds.map(id => this.state.allCards[id])}
+                onRandomCard = {this.handleRandomCard}
+                onDeleteCard = {this.handleDeleteCard}
               />
             ))}
           </div>
